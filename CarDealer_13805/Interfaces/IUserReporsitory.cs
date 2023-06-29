@@ -1,9 +1,9 @@
 ﻿using CarDealer_13805.Models;
 
-namespace CarDealer_13805
+namespace CarDealer_13805.Interfaces
 {
-    
-    public interface IUserRepository
+
+    public interface IUserReporsitory
     {
         public void CreateUser(User user);
         public User? UserGetUserById(int id);

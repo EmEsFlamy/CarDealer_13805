@@ -1,10 +1,11 @@
 ﻿using CarDealer_13805.Database;
 using CarDealer_13805.Models.Enums;
 using CarDealer_13805.Models;
+using CarDealer_13805.Interfaces;
 
 namespace CarDealer_13805.Repositories
 {
-    public class UserRepository : IUserRepository
+    public class UserRepository : IUserReporsitory
     {
         private readonly ApplicationDbContext _context;
 

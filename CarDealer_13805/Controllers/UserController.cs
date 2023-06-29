@@ -1,16 +1,17 @@
-﻿using CarDealer_13805.Models;
+﻿using CarDealer_13805.Interfaces;
+using CarDealer_13805.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarDealer_13805.Controllers
 {
-    
+
     [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly IUserRepository _userRepository;
+        private readonly IUserReporsitory _userRepository;
 
-        public UserController(IUserRepository userRepository)
+        public UserController(IUserReporsitory userRepository)
         {
             _userRepository = userRepository;
         }
