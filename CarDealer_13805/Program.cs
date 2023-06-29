@@ -1,9 +1,17 @@
+using CarDealer_13805.Database;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+        options.UseSqlite(@"DataSource=appliaction.db;"));
 
 var app = builder.Build();
 
