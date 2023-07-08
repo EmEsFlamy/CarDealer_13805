@@ -9,9 +9,10 @@ namespace CarDealer_13805.Reporsitories
     public class OrderRepository : IOrderRepository
     {
         private readonly ApplicationDbContext _context;
+
         public OrderRepository(ApplicationDbContext context)
         {
-            _context = context;  
+            _context = context;
         }
 
         public Order CreateOrder(Order order)
@@ -24,7 +25,7 @@ namespace CarDealer_13805.Reporsitories
         public Order? GetOrderById(int id)
         {
             var order = _context.Orders.FirstOrDefault(o => o.Id == id);
-            return order;   
+            return order;
         }
     }
 }

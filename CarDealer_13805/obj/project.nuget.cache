@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4ZxYRG3LV8FGxWNcfQgT4mU8Y4SxKYy88p95+ZdB3suubLrpmeha/a8CY6ttmw+dk9k9Cv7hjLro3BydugSU7g==",
+  "dgSpecHash": "O3QD9pk17hSWimvohOT0Q87QUkKxy5/JGl3nHyYH/dZkbDQMPWRbldhUcokKIHXVEr5lggeoB8F1CROSrrnH/Q==",
   "success": true,
   "projectFilePath": "D:\\CarDealer_13805\\CarDealer_13805\\CarDealer_13805\\CarDealer_13805.csproj",
   "expectedPackageFiles": [
@@ -49,11 +49,7 @@
     "C:\\Users\\Rogal\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\Rogal\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512",
     "C:\\Users\\Rogal\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
-    "C:\\Users\\Rogal\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
-    "C:\\Users\\Rogal\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.15\\microsoft.windowsdesktop.app.ref.6.0.15.nupkg.sha512",
-    "C:\\Users\\Rogal\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.15\\microsoft.netcore.app.ref.6.0.15.nupkg.sha512",
-    "C:\\Users\\Rogal\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.15\\microsoft.aspnetcore.app.ref.6.0.15.nupkg.sha512",
-    "C:\\Users\\Rogal\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.15\\microsoft.netcore.app.host.win-x64.6.0.15.nupkg.sha512"
+    "C:\\Users\\Rogal\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }

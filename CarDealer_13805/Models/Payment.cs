@@ -11,7 +11,7 @@ namespace CarDealer_13805.Models
         public virtual int UserId { get; set; }
         [JsonIgnore]
         public User? User { get; set; }
-
-        public DateTime TranscationDate { get; set; }
+        public bool IsPaid { get; set; } = false;
+        public int? TotalPrice { get; set; }
     }
 }

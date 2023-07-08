@@ -7,7 +7,10 @@ namespace CarDealer_13805.Helpers
     public class EncodeHelper
     {
         private static EncodeHelper? _encodeHelper;
-        
+        private EncodeHelper()
+        {
+
+        }
         public static EncodeHelper Instance()
         {
             if (_encodeHelper is null) _encodeHelper = new EncodeHelper();
@@ -15,13 +18,13 @@ namespace CarDealer_13805.Helpers
         }
         public string Encode(string text)
         {
-            string passwordHash = BCrypt.Net.BCrypt.HashPassword(text);
-            return passwordHash;
+            var bytes = Encoding.UTF8.GetBytes(text);
+            var hash = Convert.ToBase64String(bytes);
+            return hash;
         }
         public bool Verify(string pwd1, string pwd2)
         {
-            bool verified = BCrypt.Net.BCrypt.Verify(pwd1, pwd2);
-            return verified;
+            return pwd1 == pwd2;
         }
     }
 }

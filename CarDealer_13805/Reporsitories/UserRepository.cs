@@ -10,18 +10,27 @@ namespace CarDealer_13805.Repositories
     {
         private readonly ApplicationDbContext _context;
         private readonly EncodeHelper _encodeHelper;
-
         public UserRepository(ApplicationDbContext context)
         {
             _encodeHelper = EncodeHelper.Instance();
             _context = context;
         }
-        public void CreateUser(User user)
+        public bool CreateUser(User user)
         {
-            user.Password = _encodeHelper.Encode(user.Password);
-            user.UserType = (int)UserTypeEnum.User;
-            _context.Users.Add(user);
-            _context.SaveChanges();
+            try
+            {
+                var usermail = _context.Users.FirstOrDefault(x => x.Email == user.Email);
+                if (usermail is not null) return false;
+                user.Password = _encodeHelper.Encode(user.Password);
+                user.UserType = (int)UserTypeEnum.User;
+                _context.Users.Add(user);
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            return true;
         }
 
         public bool DeleteUser(int id)
@@ -38,7 +47,7 @@ namespace CarDealer_13805.Repositories
             var user = _context.Users.FirstOrDefault(x => x.Email == userCredential.Email);
             if (user is null) return null;
             var credentialPasswordHash = _encodeHelper.Encode(userCredential.Password);
-            if (_encodeHelper.Verify(user.Password, credentialPasswordHash)) return null;
+            if (!_encodeHelper.Verify(user.Password, credentialPasswordHash)) return null;
             return user;
         }
 

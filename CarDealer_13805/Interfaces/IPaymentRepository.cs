@@ -7,5 +7,9 @@ namespace CarDealer_13805.Interfaces
         public void CreatePayment(Payment payment);
 
         public Payment? GetPaymentById(int id);
+
+        public IEnumerable<PaymentDetails> GetAllUnpaid();
+
+        public void MarkAsPaid(int id);
     }
 }
