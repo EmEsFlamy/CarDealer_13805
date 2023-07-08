@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  
+    <navbar>
+      <button onclick="backHome()">Back to home</button>
+      <button onclick="createCar()">Create Car</button>
+    </navbar>
+  
+  <body>
+    <div id="paymentList"></div>
+    <button onclick="pay()">Pay</button>
+    
+    <script src="../Scripts/Scripts.js" async defer></script>
+    <script src="../Scripts/payments.js" async defer></script>
+  </body>
+</html>
+<template id="payment-template">
+  <div class="payment-container">
+    <p>Name: <span class="userName">Jan</span></p>
+    <p>Surname: <span class="userSurname">Kowalski</span></p>
+    <p>Mark: <span class="carMark">Audi</span></p>
+    <p>Model: <span class="carModel">A7</span></p>
+    <p>Start Date: <span class="startDate">01-02-2023</span></p>
+    <p>End Date: <span class="endDate">02-02-2023</span></p>
+    <p>Price: <span class="carPrice">400</span> PLN</p>
+    <input id="payment-value" type="radio" name="paymentValue" value="997" />
+  </div>
+</template>

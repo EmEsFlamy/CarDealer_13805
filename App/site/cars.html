@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Car Dealer</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <navbar>
+    <button type="button" onclick="logOut()">Log Out</button>
+    <button type="button" onclick="back()">Back</button>
+  </navbar>
+  <body id="bodyCars">
+    <div id="msg2">No cars available!</div>
+    <div id="car-list" class="carsList"></div>
+    <button
+      type="button"
+      id="reserveButton"
+      disabled="true"
+      onclick="makeOrder()"
+    >
+      Reserve
+    </button>
+    <script src="../Scripts/Scripts.js" async defer></script>
+    <script src="../Scripts/cars.js" async defer></script>
+  </body>
+</html>
+<template id="car-template">
+  <div class="car-container">
+    <h3>Mark: <span id="car-mark">Car Mark</span></h3>
+    <h3>Model: <span id="car-model">Car Model</span></h3>
+    <h4>Price: <span id="car-price">400</span> PLN (per day)</h4>
+    <br>
+    From: <input type="date" class="start-date" /> To:
+    <input type="date" class="end-date" />
+    <input id="car-value" type="radio" name="car" value="997" />
+    <div id="msg3">Cannot travel back in time!</div>
+  </div>
+</template>

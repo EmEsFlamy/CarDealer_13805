@@ -1,4 +1,6 @@
-﻿namespace CarDealer_13805.Models
+﻿using System.Text.Json.Serialization;
+
+namespace CarDealer_13805.Models
 {
     public class Car
     {
@@ -7,5 +9,8 @@
         public string Mark { get; set; }
         public string Model { get; set; }
         public double Price { get; set; }
+
+        [JsonIgnore]
+        public Order? Orders { get; set; }
     }
 }
