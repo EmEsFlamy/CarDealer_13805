@@ -1,13 +1,15 @@
-const APIURL = "https://localhost:7160/api/";
+const APIURL = "https://localhost:7037/api/";
 
 
-
-function login() {
+document.getElementById("loginClick").addEventListener("click", login);
+document.getElementById("registerClick").addEventListener("click", register);
+function login(event) {
+   event.preventDefault();
   let email = document.forms["LoginForm"]["email"].value;
   let password = document.forms["LoginForm"]["password"].value;
-  if (email === "" || password === "") return; 
+  if (email === "" || password === "") return;
   const data = { email, password };
-  fetch(APIURL + "user/login", {
+  fetch(APIURL +"User/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -28,11 +30,11 @@ function login() {
     });
 }
 function register() {
-  const email = document.forms["RegisterForm"]["email"].value;
-  const password = document.forms["RegisterForm"]["password"].value;
-  const name = document.forms["RegisterForm"]["name"].value;
-  const surname = document.forms["RegisterForm"]["surname"].value;
-  const verifyPassword = document.forms["RegisterForm"]["verifyPassword"].value;
+  const email = document.forms["registerForm"]["email"].value;
+  const password = document.forms["registerForm"]["password"].value;
+  const name = document.forms["registerForm"]["name"].value;
+  const surname = document.forms["registerForm"]["surname"].value;
+  const verifyPassword = document.forms["registerForm"]["verifyPassword"].value;
   if (password !== verifyPassword) {
     let msg = document.getElementById("msg");
     msg.style.display = "block";
@@ -44,7 +46,7 @@ function register() {
     name,
     surname,
   };
-  fetch(APIURL + "user/register", {
+  fetch(APIURL + "User/register", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -66,8 +68,6 @@ function register() {
     })
     .catch((err) => {});
 }
-
-
 
 function logOut() {
   localStorage.clear();
@@ -92,7 +92,7 @@ function redirectOnLogOut() {
 }
 
 function backHome() {
-  redirect("adminPanel.html", "home.html")
+  redirect("adminPanel.html", "home.html");
 }
 
 function createCar() {

@@ -10,28 +10,58 @@
     <title>Car Dealer | Login</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link href="../style/loginStyle.css" rel="stylesheet" />
+    <script src="../JS/Scripts.js" async defer></script>
   </head>
   <body id="backgroundL">
+    <div id="login1">Sign in to your account</div>
     <div class="login">
-      <div id="login1">Sign in to your account</div>
-      <form action="" name="LoginForm" id="loginForm">
-        <div id="login2">
-          <div>E-mail</div>
-          <input id="login2-1" type="email" name="email" />
+      <form action="" name="LoginForm" id="loginForm" class="row-md-3">
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">E-mail</label>
+          <input
+            name="email"
+            type="text"
+            class="form-control"
+            id="formGroupExampleInput"
+            placeholder="Your E-mail"
+          />
         </div>
-        <div id="login3">
-          <div>Password</div>
-          <input id="login3-1" type="password" name="password" />
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label"
+            >Password</label
+          >
+          <input
+            name="password"
+            type="password"
+            class="form-control"
+            id="formGroupExampleInput2"
+            placeholder="Your Password"
+          />
         </div>
         <div id="msg1">User does not exist!</div>
+        <div class="col-12">
+          <button id="loginClick"  type="submit">
+            CONTINUE
+          </button>
+        </div>
       </form>
-      <button id="loginClick" onclick="login()" type="submit">CONTINUE</button>
+
       <a id="singUp1" href="./register.html">
         <div id="createText">Don't have an account? Sign Up</div>
       </a>
     </div>
-
-    <script src="../Scripts/Scripts.js" async defer></script>
   </body>
 </html>

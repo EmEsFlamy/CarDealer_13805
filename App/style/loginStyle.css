@@ -1,0 +1,85 @@
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+    background-image: url("https://www.shutterstock.com/image-photo/2020124-dumbo-brooklyn-ny-orange-260nw-1625891587.jpg");
+}
+
+#login1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 40px;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    font-size: 200%;
+    color: white;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+    width: 75%;
+    border-radius: 6px;
+  }
+
+  #loginClick {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 40px;
+    width: 50%;
+    gap: 10px;
+    margin-top: 5%;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    color: white;
+    border: 3px solid black;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    background: black;
+    border-radius: 6px;
+  }
+
+  #loginClick:hover {
+    background-color: white;
+    color: black;
+  }
+
+  .col-12 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .row-md-3 {
+    color: white;
+  }
+
+  #singUp1 {
+    color:azure
+  }
+
+  #singUp1:hover {
+    color: green;
+  }
+
+  .form-control {
+    border: 2px solid rgb(255, 123, 0);
+  }
+
+  #msg1 {
+    display: none;
+    color: red;
+  }

@@ -15,8 +15,8 @@ namespace CarDealer_13805.Reporsitories
         {
             var signinCredentials = new SigningCredentials(SecretKey, SecurityAlgorithms.HmacSha256);
             var tokeOptions = new JwtSecurityToken(
-                issuer: "https://localhost:7160",
-                audience: "https://localhost:7160",
+                issuer: "https://localhost:5500",
+                audience: "https://localhost:5500",
                 claims: GetUserClaims(user),
                 expires: DateTime.Now.AddHours(1),
                 signingCredentials: signinCredentials

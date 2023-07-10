@@ -1,0 +1,81 @@
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  background-image: url("https://ocdn.eu/pulscms-transforms/1/cRHktkpTURBXy80NTFmMDZhZDc4MTFhZTA3Y2EzMzlhMWJjYjQ2Mzk4MC5qcGeSlQM2AM0EAM0CP5MFzQSwzQJ2");
+}
+
+#registerStart {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 40px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  font-size: 200%;
+  color: white;
+}
+
+.register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  gap: 10px;
+  width: 75%;
+  border-radius: 6px;
+}
+
+#registerClick {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 40px;
+  width: 50%;
+  gap: 10px;
+  margin-top: 5%;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  color: white;
+  border: 3px solid black;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  background: black;
+  border-radius: 6px;
+}
+
+#registerClick:hover {
+  background-color: white;
+  color: black;
+}
+
+.col-12 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.mb-3 {
+  color: white;
+}
+
+#logIn1 {
+  color: azure;
+}
+
+#logIn1:hover {
+  color: green;
+}
+
+.form-control {
+  border: 2px solid rgb(255, 123, 0);
+}
+
