@@ -1,4 +1,5 @@
-const APIURL = "https://localhost:7172/api/";
+const API_URL_USER = "https://localhost:7172/api/";
+const API_URL_CAR = "https://localhost:7201/api/";
 
 //document.getElementById("loginClick").addEventListener("click", login);
 //document.getElementById("registerClick").addEventListener("click", register);
@@ -7,7 +8,7 @@ function login() {
   let password = document.forms["LoginForm"]["password"].value;
   if (email === "" || password === "") return;
   const data = { email, password };
-  fetch(APIURL + "User/login", {
+  fetch(API_URL_USER + "User/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -45,7 +46,7 @@ function register() {
     name,
     surname,
   };
-  fetch(APIURL + "User/register", {
+  fetch(API_URL_USER + "User/register", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

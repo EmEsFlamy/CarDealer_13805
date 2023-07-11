@@ -5,7 +5,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace CarDealer_User.Reporsitories
+namespace CarDealer_User.Repositories
 {
     public class TokenRepository : ITokenRepository
     {
