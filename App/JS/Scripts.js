@@ -1,15 +1,13 @@
-const APIURL = "https://localhost:7037/api/";
+const APIURL = "https://localhost:7172/api/";
 
-
-document.getElementById("loginClick").addEventListener("click", login);
-document.getElementById("registerClick").addEventListener("click", register);
-function login(event) {
-   event.preventDefault();
+//document.getElementById("loginClick").addEventListener("click", login);
+//document.getElementById("registerClick").addEventListener("click", register);
+function login() {
   let email = document.forms["LoginForm"]["email"].value;
   let password = document.forms["LoginForm"]["password"].value;
   if (email === "" || password === "") return;
   const data = { email, password };
-  fetch(APIURL +"User/login", {
+  fetch(APIURL + "User/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -22,6 +20,7 @@ function login(event) {
     })
     .then((x) => {
       localStorage.setItem("token", x.token);
+
       redirect("login.html", "home.html");
     })
     .catch((err) => {
