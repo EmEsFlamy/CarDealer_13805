@@ -2019,11 +2019,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CarDealer_13805\\CarDealer_13805\\CarDealer_13805\\CarDealer_13805.csproj",
+      "projectUniqueName": "D:\\Project\\CarDealer_13805\\CarDealer_13805\\CarDealer_13805.csproj",
       "projectName": "CarDealer_13805",
-      "projectPath": "D:\\CarDealer_13805\\CarDealer_13805\\CarDealer_13805\\CarDealer_13805.csproj",
+      "projectPath": "D:\\Project\\CarDealer_13805\\CarDealer_13805\\CarDealer_13805.csproj",
       "packagesPath": "C:\\Users\\Rogal\\.nuget\\packages\\",
-      "outputPath": "D:\\CarDealer_13805\\CarDealer_13805\\CarDealer_13805\\obj\\",
+      "outputPath": "D:\\Project\\CarDealer_13805\\CarDealer_13805\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
