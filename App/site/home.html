@@ -11,6 +11,7 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="../JS/Scripts.js" async defer></script>
+    <script src="../JS/Admin_button.js" async defer></script>
     <link href="../style/homeStyle.css" rel="stylesheet" />
     <script
       defer
@@ -28,13 +29,26 @@
   <nav class="navbar bg-light">
     <div class="container">
       <a class="navbar-brand" href="../site/home.html">
-        <img src="../photos/rental-car.png" width="30" height="30" class="d-inline-block align-text-top">CarDealer
+        <img
+          src="../photos/rental-car.png"
+          width="30"
+          height="30"
+          class="d-inline-block align-text-top"
+        />CarDealer
       </a>
-      <div class="quote">
-        Unleash Your Adventure on Wheels
+      <div class="quote">Unleash Your Adventure on Wheels</div>
+      <div class="admin-panel" style="display: none">
+        <a href="adminPanel.html">
+          <button type="button">Admin Panel</button>
+        </a>
       </div>
-      <div >
-        <a class="contactUs" href="https://dziekanat.wsei.edu.pl/" target="_blank">Contact Us</a>
+      <div>
+        <a
+          class="contactUs"
+          href="https://dziekanat.wsei.edu.pl/"
+          target="_blank"
+          >Contact Us</a
+        >
       </div>
     </div>
     <button type="button" onclick="logOut()" id="nlogout">Log Out</button>
@@ -44,17 +58,14 @@
       </a>
     </div>
   </nav>
-  
 
   <body id="body3">
     <div id="homeStart">Pick the car type</div>
-    <div class="row row-cols-sm-4 p-5" id="carPick">
+
+    <div class="row row-cols-2 p-5 cars" id="carPick">
       <div class="row-gap-lg-1" onclick="loadCars(0)">
         <div class="card">
-          <img
-            src="../photos/sport-car.png"
-            class="card-img-top"
-          />
+          <img src="../photos/sport-car.png" class="card-img-top" />
           <div class="card-body">
             <h5 class="card-title">Sport</h5>
           </div>
@@ -62,10 +73,7 @@
       </div>
       <div class="row-gap-lg-1" onclick="loadCars(1)">
         <div class="card">
-          <img
-            src="../photos/van.png"
-            class="card-img-top"
-          />
+          <img src="../photos/van.png" class="card-img-top" />
           <div class="card-body">
             <h5 class="card-title">Van</h5>
           </div>
@@ -73,10 +81,7 @@
       </div>
       <div class="row-gap-lg-1" onclick="loadCars(2)">
         <div class="card">
-          <img
-            src="../photos/sedan (1).png"
-            class="card-img-top"
-          />
+          <img src="../photos/sedan (1).png" class="card-img-top" />
           <div class="card-body">
             <h5 class="card-title">City Car</h5>
           </div>
@@ -84,16 +89,12 @@
       </div>
       <div class="row-gap-lg-1" onclick="loadCars(3)">
         <div class="card">
-          <img
-            src="../photos/limousine.png"
-            class="card-img-top"
-          />
+          <img src="../photos/limousine.png" class="card-img-top" />
           <div class="card-body">
             <h5 class="card-title">Luxury</h5>
           </div>
         </div>
       </div>
     </div>
-    
   </body>
 </html>

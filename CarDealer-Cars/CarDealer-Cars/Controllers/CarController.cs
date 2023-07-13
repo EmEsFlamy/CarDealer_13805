@@ -37,5 +37,14 @@ namespace CarDealer_Car.Controllers
             var cars = _carRepository.GetCarsByType(carType);
             return Ok(cars);
         }
+
+        [HttpDelete]
+        [Authorize(Roles = "1")]
+        public IActionResult DeleteCar(int id)
+        {
+            var deletedcar = _carRepository.DeleteCar(id);
+            if (!deletedcar) return BadRequest("Car cannot be found");
+            return Ok();
+        }
     }
 }

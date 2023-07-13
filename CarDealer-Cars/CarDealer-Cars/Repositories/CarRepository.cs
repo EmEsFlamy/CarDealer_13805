@@ -19,6 +19,15 @@ namespace CarDealer_Car.Reporsitories
             _context.SaveChanges();
         }
 
+        public bool DeleteCar(int id)
+        {
+            var car = GetCarById(id);
+            if (car is null) return false;
+            _context.Cars.Remove(car);
+            _context.SaveChanges();
+            return true;
+        }
+
         public Car GetCarById(int id)
         {
             var car = _context.Cars.FirstOrDefault(c => c.Id == id);

@@ -118,14 +118,6 @@ namespace CarDealer_Cars.Migrations
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("UserName")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("UserSurname")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
                     b.ToTable((string)null);
 
                     b.ToView("View_PaymentDetails", (string)null);

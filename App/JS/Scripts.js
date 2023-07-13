@@ -66,7 +66,7 @@ function register() {
         msg.style.display = "block";
       }
     })
-    .catch((err) => {});
+  
 }
 
 function logOut() {
@@ -91,10 +91,11 @@ function redirectOnLogOut() {
   redirect(oldUrl, "login.html");
 }
 
-function backHome() {
-  redirect("adminPanel.html", "home.html");
-}
+
 
 function createCar() {
   redirect("adminPanel.html", "adminCarsAdd.html");
 }
+
+const adminPanelButton = document.querySelector(".admin-panel");
+

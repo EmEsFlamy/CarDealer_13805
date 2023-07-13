@@ -11,6 +11,6 @@ namespace CarDealer_Car.Interfaces
 
         public IEnumerable<Car> GetCarsByType(CarTypeEnum carType);
 
-
+        public bool DeleteCar(int id);
     }
 }

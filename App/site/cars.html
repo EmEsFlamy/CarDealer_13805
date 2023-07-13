@@ -10,37 +10,69 @@
     <title>Car Dealer</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="../style/carsStyle.css" rel="stylesheet" />
+    <script src="../JS/Scripts.js" async defer></script>
+    <script src="../JS/Car.js" async defer></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
   </head>
-  <navbar>
-    <button type="button" onclick="logOut()">Log Out</button>
-    <button type="button" onclick="back()">Back</button>
-  </navbar>
+  <nav class="navbar bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="../site/home.html">
+        <img
+          src="../photos/rental-car.png"
+          width="30"
+          height="30"
+          class="d-inline-block align-text-top"
+        />CarDealer
+      </a>
+      <div class="quote">Unleash Your Adventure on Wheels</div>
+      <div>
+        <a
+          class="contactUs"
+          href="https://dziekanat.wsei.edu.pl/"
+          target="_blank"
+          >Contact Us</a
+        >
+      </div>
+    </div>
+    <button type="button" onclick="logOut()" id="nlogout">Log Out</button>
+  </nav>
   <body id="bodyCars">
     <div id="msg2">No cars available!</div>
+    
     <div id="car-list" class="carsList"></div>
+    <div class="reserveButton">
     <button
       type="button"
       id="reserveButton"
-      disabled="true"
+      
       onclick="makeOrder()"
     >
       Reserve
     </button>
-    <script src="" async defer></script>
-    <script src="" async defer></script>
+  </div>
+    <div class="hidden" id="dateSelector">From: <input type="date" class="start-date" /> 
+      To: <input type="date" class="end-date" /></div>
+    <template id="car-template">
+      <div class="row row-cols-2 p-5 car-container">
+        <h3>Mark: <span id="car-mark">Car Mark</span></h3>
+        <h3>Model: <span id="car-model">Car Model</span></h3>
+        <h4>Price: <span id="car-price">400</span> PLN (per day)</h4>
+        
+        <div><input id="car-value" type="radio" role="switch"  name="car" value="997" class="form-check-input" /></div>
+        <div id="msg3">Cannot travel back in time!</div>
+      </div>
+    </template>
   </body>
 </html>
-<template id="car-template">
-  <div class="car-container">
-    <h3>Mark: <span id="car-mark">Car Mark</span></h3>
-    <h3>Model: <span id="car-model">Car Model</span></h3>
-    <h4>Price: <span id="car-price">400</span> PLN (per day)</h4>
-    <br>
-    From: <input type="date" class="start-date" /> To:
-    <input type="date" class="end-date" />
-    <input id="car-value" type="radio" name="car" value="997" />
-    <div id="msg3">Cannot travel back in time!</div>
-  </div>
-</template>

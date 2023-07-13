@@ -19,7 +19,7 @@ namespace CarDealer_Car.Database
                 .Entity<PaymentDetails>(eb =>
                 {
                     eb.HasNoKey();
-                    eb.ToView("View_PaymentDetails");
+                    eb.ToView(nameof(PaymentDetails));
                 });
         }
 
