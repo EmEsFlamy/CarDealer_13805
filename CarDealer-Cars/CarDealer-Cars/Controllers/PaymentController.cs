@@ -1,5 +1,6 @@
 ﻿using CarDealer_Car.Interfaces;
 using CarDealer_Car.Models;
+using CarDealer_Cars.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
@@ -11,9 +12,10 @@ namespace CarDealer_Car.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Authorize]
-    public class PaymentController : ControllerBase
+    public class PaymentController : ControllerBase 
     {
         private readonly IPaymentRepository _paymentRepository;
+       
 
         public PaymentController(IPaymentRepository paymentRepository)
         {
@@ -40,15 +42,16 @@ namespace CarDealer_Car.Controllers
         [Authorize(Roles = "1")]
         public IActionResult GetAllUnpaid()
         {
-            var payments = _paymentRepository.GetAllUnpaid();
+            var access_token = HttpContext.Request.Headers["Authorization"];
+            var payments = _paymentRepository.GetAllUnpaid(access_token.First().Split(" ")[1]);
             return Ok(payments);
         }
 
         [HttpPost("MarkAsPaid")]
         [Authorize(Roles = "1")]
-        public IActionResult MarkAsPaid([FromBody] VerifyPayment verifyPayment)
+        public IActionResult MarkAsPaid([FromBody] Payment payment)
         {
-            _paymentRepository.MarkAsPaid(verifyPayment.Id);
+            _paymentRepository.MarkAsPaid(payment.Id);
             return Ok();
         }
     }

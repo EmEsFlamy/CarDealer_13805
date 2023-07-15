@@ -2,11 +2,11 @@ const paymentList = document.querySelector("#paymentList");
 const template = document.querySelector("#payment-template");
 
 let payments = undefined;
-let paymentId = undefined;
+var paymentId
 
 window.addEventListener("load", () => {
+  const API_URL_CAR = "https://localhost:7201/api/";
   const token = localStorage.getItem("token");
-  const user = localStorage.getItem("userId");
   fetch(API_URL_CAR + "Payment/GetAllUnpaid", {
     method: "GET",
     headers: {
@@ -36,13 +36,13 @@ function createPaymentDiv(payment, index) {
   const price = clone.querySelector(".carPrice");
   const radioValue = clone.getElementById("payment-value");
   radioValue.value = index;
-  name.innerHTML = payment.userName;
-  surname.innerHTML = payment.userSurname;
+  name.innerHTML = payment.name;
+  surname.innerHTML = payment.surname;
   mark.innerHTML = payment.mark;
   model.innerHTML = payment.model;
   startDate.innerHTML = payment.startDate;
   endDate.innerHTML = payment.endDate;
-  price.innerHTML = payment.price;
+  price.innerHTML = payment.totalPrice;
   paymentList.appendChild(clone);
 }
 
@@ -53,7 +53,6 @@ function createPaymentsEventListener() {
       if (e.target.matches("input")) {
         const index = e.target.value;
         selectedPaymentId = payments.at(index).paymentId;
-        console.log(selectedPaymentId);
       }
     });
   });
@@ -64,7 +63,7 @@ function pay() {
     id: selectedPaymentId
   };
   const token = localStorage.getItem("token")
-  fetch(API_URL_CAR + "payment/MarkAsPaid", {
+  fetch(API_URL_CAR + "Payment/MarkAsPaid", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -76,6 +75,7 @@ function pay() {
 
 
 function addCar() {
+  const API_URL_CAR = "https://localhost:7201/api/";
   const carType = Number(document.forms["CarsAddForm"]["CarType"].value);
   const mark = document.forms["CarsAddForm"]["Mark"].value;
   const model = document.forms["CarsAddForm"]["Model"].value;

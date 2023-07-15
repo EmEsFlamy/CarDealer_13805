@@ -9,5 +9,6 @@
         public string Mark { get; set; }
         public string Model { get; set; }
         public int TotalPrice { get; set; }
+        public int UserId { get; set; } 
     }
 }

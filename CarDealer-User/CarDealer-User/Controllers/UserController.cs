@@ -3,6 +3,7 @@ using CarDealer_User.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
+using System.Security.Claims;
 
 namespace CarDealer_User.Controllers
 {
@@ -43,10 +44,22 @@ namespace CarDealer_User.Controllers
             return Ok(authenticatedResponse);
         }
 
-        [HttpGet("{id}")]
-        public IActionResult GetuserById(int id)
+        [HttpGet]
+        public IActionResult GetuserById()
         {
-            var user = _userRepository.GetUserById(id);
+            var claimsIdentity = HttpContext.User.Identity as ClaimsIdentity;
+            var userid = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
+            var user = _userRepository.GetUserById(Int32.Parse(userid.Value));
+            if (user is null) return BadRequest("User does not exist!");
+            return Ok(user);
+        }
+
+        [HttpGet("{userid}")]
+        [Authorize(Roles = "1")]
+        public IActionResult GetuserById(int userid)
+        {
+
+            var user = _userRepository.GetUserById(userid);
             if (user is null) return BadRequest("User does not exist!");
             return Ok(user);
         }

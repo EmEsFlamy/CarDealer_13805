@@ -2,6 +2,8 @@ using CarDealer_Car.Database;
 using CarDealer_Car.Interfaces;
 using CarDealer_Car.Reporsitories;
 using CarDealer_Car.Repositories;
+using CarDealer_Cars.Interfaces;
+using CarDealer_Cars.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -23,10 +25,13 @@ public class Program
                         .AllowAnyMethod();
                 });
         });
+        builder.Services.AddScoped<IUserRepository, UserRepository>();
         builder.Services.AddScoped<ITokenRepository, TokenRepository>();
         builder.Services.AddScoped<ICarRepository, CarRepository>();
         builder.Services.AddScoped<IOrderRepository, OrderRepository>();
         builder.Services.AddScoped<IPaymentRepository, PaymentRepository>();
+        
+
         
 
 

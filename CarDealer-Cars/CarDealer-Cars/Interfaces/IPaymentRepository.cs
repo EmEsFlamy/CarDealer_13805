@@ -1,4 +1,5 @@
 ﻿using CarDealer_Car.Models;
+using CarDealer_Cars.Interfaces.DTO;
 
 namespace CarDealer_Car.Interfaces
 {
@@ -8,7 +9,7 @@ namespace CarDealer_Car.Interfaces
 
         public Payment? GetPaymentById(int id);
 
-        public IEnumerable<PaymentDetails> GetAllUnpaid();
+        public IEnumerable<PaymentDetailsDTO> GetAllUnpaid(string access_token);
 
         public void MarkAsPaid(int id);
     }
