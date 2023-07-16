@@ -50,6 +50,8 @@ namespace CarDealer_Car.Reporsitories
                 payment.IsPaid = true;
                 _context.SaveChanges();
             }
-        }
+
+        
+    }
     }
 

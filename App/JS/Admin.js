@@ -34,8 +34,8 @@ function createPaymentDiv(payment, index) {
   const startDate = clone.querySelector(".startDate");
   const endDate = clone.querySelector(".endDate");
   const price = clone.querySelector(".carPrice");
-  const radioValue = clone.getElementById("payment-value");
-  radioValue.value = index;
+  // const radioValue = clone.getElementById("payment-value");
+  // radioValue.value = index;
   name.innerHTML = payment.name;
   surname.innerHTML = payment.surname;
   mark.innerHTML = payment.mark;
@@ -98,7 +98,7 @@ function addCar() {
   })
     .then((x) => {
       alert("Car created!");
-      redirect("adminCarsAdd.html", "adminPanel.html");
+      redirect("adminCarsAdd.html", "home.html");
     })
     .catch((err) => {});
 }

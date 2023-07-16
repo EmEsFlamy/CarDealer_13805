@@ -21,6 +21,11 @@ body {
   color: white;
 }
 
+#msg {
+  display: none;
+  color: red;
+}
+
 .register {
   display: flex;
   flex-direction: column;

@@ -1,0 +1,87 @@
+
+.payment-container {
+    max-width: 35%;
+  margin: 1%;
+  text-align: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  top: 2%;
+  border-radius: 5px;
+  border: 2px solid orange;
+  box-shadow: 0 0 10px black;
+  background-color: rgb(211, 210, 208);
+}
+
+#nlogout {
+    margin-left: 5%;
+    background: black;
+    border: 3px solid black;
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+#nlogout:hover {
+  background-color: orange;
+    color: black;
+}
+
+
+.quote {
+  font-size: x-large;
+  font-style: oblique;
+  color: orange;
+}
+
+.contactUs {
+  color: black;
+  text-decoration: none;
+  font-size: x-large;
+}
+
+.contactUs:hover {
+  color: orange;
+}
+
+.navbar-brand {
+  color: black;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+    color: black;
+    transform: scale(1.05);
+}
+
+#admin-panel {
+  background: black;
+  border: 3px solid black;
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+
+#admin-panel:hover {
+  background-color: orange;
+  color: black;
+}
+
+#admin-panel1 {
+  background: black;
+  border: 3px solid black;
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+
+#admin-panel1:hover {
+  background-color: orange;
+  color: black;
+}

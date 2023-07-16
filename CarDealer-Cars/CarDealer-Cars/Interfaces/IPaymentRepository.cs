@@ -12,5 +12,6 @@ namespace CarDealer_Car.Interfaces
         public IEnumerable<PaymentDetailsDTO> GetAllUnpaid(string access_token);
 
         public void MarkAsPaid(int id);
+       
     }
 }

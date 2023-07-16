@@ -95,3 +95,33 @@ body {
     color: black;
     transform: scale(1.05);
 }
+
+#admin-panel {
+  background: black;
+  border: 3px solid black;
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+
+#admin-panel:hover {
+  background-color: orange;
+  color: black;
+}
+
+#admin-panel1 {
+  background: black;
+  border: 3px solid black;
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+
+#admin-panel1:hover {
+  background-color: orange;
+  color: black;
+}

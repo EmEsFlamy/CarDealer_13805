@@ -1,6 +1,9 @@
 const API_URL_USER = "https://localhost:7172/api/";
 const API_URL_CAR = "https://localhost:7201/api/";
 
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
 //document.getElementById("loginClick").addEventListener("click", login);
 //document.getElementById("registerClick").addEventListener("click", register);
 function login() {
@@ -93,9 +96,7 @@ function redirectOnLogOut() {
 
 
 
-function createCar() {
-  redirect("adminPanel.html", "adminCarsAdd.html");
-}
 
-const adminPanelButton = document.querySelector(".admin-panel");
+
+
 

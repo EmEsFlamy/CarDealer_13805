@@ -1,14 +1,17 @@
 body {
-    min-width: 100vw;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     background-size: cover;
-    background-image: url("https://www.motospace.pl/dat/articles/2015-02/skoda-yeti-2-0-tdi-test-spalanie-dane-techniczne-opinie-512.jpg");
+    overflow-x:hidden;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+     background-image: url("https://www.motospace.pl/dat/articles/2015-02/skoda-yeti-2-0-tdi-test-spalanie-dane-techniczne-opinie-512.jpg");
   }
 
+
+
+.navbar {
+    margin-left: 0;
+    margin-right: 0;
+}
 
 .addCars {
     display: flex;
@@ -30,30 +33,6 @@ body {
 }
 #carModel {
     color: white;
-}
-
-.backClick {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 40px;
-    width: 50%;
-    gap: 10px;
-    margin-top: 5%;
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
-    color: white;
-    border: 3px solid black;
-    letter-spacing: 0.5px;
-    font-weight: 700;
-    background: black;
-    border-radius: 6px;
-}
-
-.backClick:hover {
-    background-color: white;
-    color: black;
 }
 
 .createCarClick {
@@ -78,4 +57,78 @@ body {
 .createCarClick:hover {
     background-color: white;
     color: black;
+}
+
+
+#nlogout {
+    margin-left: 5%;
+    background: black;
+    border: 3px solid black;
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+#nlogout:hover {
+  background-color: orange;
+    color: black;
+}
+
+
+.quote {
+  font-size: x-large;
+  font-style: oblique;
+  color: orange;
+}
+
+.contactUs {
+  color: black;
+  text-decoration: none;
+  font-size: x-large;
+}
+
+.contactUs:hover {
+  color: orange;
+}
+
+.navbar-brand {
+  color: black;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+    color: black;
+    transform: scale(1.05);
+}
+
+#admin-panel {
+  background: black;
+  border: 3px solid black;
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+
+#admin-panel:hover {
+  background-color: orange;
+  color: black;
+}
+
+#admin-panel1 {
+  background: black;
+  border: 3px solid black;
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+
+#admin-panel1:hover {
+  background-color: orange;
+  color: black;
 }

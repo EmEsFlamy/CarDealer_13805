@@ -1,8 +1,13 @@
+const adminPanelButton = document.querySelector(".admin-panel");
+const adminPanelButton1 = document.querySelector(".admin-panel1");
+
+
 window.addEventListener("load", () => {
     const role = getUserRoleFromToken();
     console.log(role);
     if (role === "1") {
       adminPanelButton.style.display = "block";
+      adminPanelButton1.style.display = "block";
     }
   });
   

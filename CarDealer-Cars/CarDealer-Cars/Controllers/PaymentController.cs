@@ -1,6 +1,7 @@
 ﻿using CarDealer_Car.Interfaces;
 using CarDealer_Car.Models;
 using CarDealer_Cars.Interfaces;
+using CarDealer_Cars.Interfaces.DTO;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
@@ -49,11 +50,13 @@ namespace CarDealer_Car.Controllers
 
         [HttpPost("MarkAsPaid")]
         [Authorize(Roles = "1")]
-        public IActionResult MarkAsPaid([FromBody] Payment payment)
+        public IActionResult MarkAsPaid([FromBody]VerifyPayment verifyPayment)
         {
-            _paymentRepository.MarkAsPaid(payment.Id);
+            _paymentRepository.MarkAsPaid(verifyPayment.Id);
             return Ok();
         }
+
+       
     }
 }
 
